@@ -20,7 +20,8 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
-        }
+          }
+     }
         // post build
         post { 
             always { 
@@ -34,4 +35,3 @@ pipeline {
             }
         }
     }
-}
