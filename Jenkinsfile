@@ -9,7 +9,8 @@ pipeline {
     }    
 
     options {
-        timeout(time: 1, unit: 'SECONDS') 
+        timeout(time: 1, unit: 'HOUR') 
+        disableConcurrentBuilds()
     }
     // build
     stages {
@@ -28,6 +29,7 @@ pipeline {
                 sh """
                     echo " Here I Wrote Shell Script"
                     echo "$GREETING"
+                    sleep 10
                 """
             }
           }
