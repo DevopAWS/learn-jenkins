@@ -4,7 +4,6 @@ pipeline {
             label 'AGENT-1'
         }
     }
-
     // build
     stages {
         stage('Build') {
@@ -22,14 +21,13 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-
-        //post build
+        // post build
         post { 
             always { 
                 echo 'I will always say Hello again!'
             }
             failure { 
-                echo 'this runs when pipeline is failed,used genarally to some send alerts '
+                echo 'this runs when pipeline is failed,used genarally to some send alerts'
             }
             success { 
                 echo 'I will say hello when pipeline success'
